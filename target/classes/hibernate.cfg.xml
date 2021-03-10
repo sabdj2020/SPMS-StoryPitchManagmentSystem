@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- set up connection info -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://revproject1.ciykrkif9gpb.us-east-2.rds.amazonaws.com:5432/postgres?currentSchema=spms2</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">Revature_2021</property>
+		
+		<!-- hibernate setup -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		
+		<!-- tell hibernate where to find our mappings -->
+		<mapping class="com.revature.beans.Person"></mapping>
+		<mapping class="com.revature.beans.Role"></mapping>
+		<mapping class="com.revature.beans.Story"></mapping>
+		<mapping class="com.revature.beans.StoryStatus"></mapping>
+		<mapping class="com.revature.beans.StoryType"></mapping>
+		<mapping class="com.revature.beans.StoryGenre"></mapping>
+		<mapping class="com.revature.beans.Questions"></mapping>
+	</session-factory>
+</hibernate-configuration>
